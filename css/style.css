@@ -6,30 +6,24 @@
 body {
   padding: 0;
   margin: 0;
+  background:#FDC648;
 }
 
-#notfound {
+#container {
   position: relative;
-  height: 100vh;
 }
 
-#notfound .notfound-bg {
+#container canvas {
+  position: absolute;
+  width:100%;
+  margin:0 auto;
+}
+
+#content .content {
   position: absolute;
   width: 100%;
   height: 100%;
   background-size: cover;
-}
-
-#notfound .notfound-bg:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(252, 198, 73, 1);
-}
-
-#notfound .notfound {
-  position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -37,37 +31,37 @@ body {
           transform: translate(-50%, -50%);
 }
 
-.notfound {
-  max-width: 910px;
-  width: 100%;
-  line-height: 1.4;
+.content {
+  line-height: 1;
   text-align: center;
-}
-
-.notfound .notfound-404 {
-  position: relative;
-  height: 200px;
-}
-
-.notfound .notfound-404 h1 {
-  font-family: 'Montserrat', sans-serif;
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+  margin: auto;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 220px;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.content .content-main {
+  position: relative;
+}
+
+.content h1 {
+  font-family: 'Anton', sans-serif;
+  position: absolute;
+  font-size: 80px;
   font-weight: 900;
-  margin: 0px;
+  margin-bottom: 32px;
+  padding: 4px;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: 10px;
+  display: inline-block;
+  border: 5px solid #FFF;
 }
 
-.notfound h2 {
+.content h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
@@ -75,7 +69,7 @@ body {
   margin-bottom: 15px;
 }
 
-.notfound .home-btn, .notfound .contact-btn {
+.content .home-btn, .content .contact-btn {
   font-family: 'Montserrat', sans-serif;
   display: inline-block;
   font-weight: 700;
@@ -91,58 +85,37 @@ body {
   transition: 0.2s all;
 }
 
-.notfound .home-btn:hover, .notfound .contact-btn:hover {
+.content .home-btn:hover, .content .contact-btn:hover {
   opacity: 0.9;
 }
 
-.notfound .home-btn {
+.content .home-btn {
   color: rgba(255, 0, 36, 0.7);
   background: #fff;
 }
 
-.notfound .contact-btn {
+.content .contact-btn {
   border: 2px solid rgba(255, 255, 255, 0.9);
   color: rgba(255, 255, 255, 0.9);
 }
 
-.notfound-social {
-  margin-top: 25px;
-}
-
-.notfound-social>a {
-  display: inline-block;
-  height: 40px;
-  line-height: 40px;
-  width: 40px;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0px 6px;
-  -webkit-transition: 0.2s all;
-  transition: 0.2s all;
-}
-.notfound-social>a:hover {
-  color: rgba(255, 0, 36, 0.7);
-  background-color: #fff;
-  border-radius: 50%;
-}
-
 @media only screen and (max-width: 767px) {
-  .notfound .notfound-404 h1 {
+  .content .content-main h1 {
     font-size: 182px;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .notfound .notfound-404 {
+  .content .content-main {
     height: 146px;
   }
-  .notfound .notfound-404 h1 {
+  .content .content-main h1 {
     font-size: 146px;
   }
-  .notfound h2 {
+  .content h2 {
     font-size: 16px;
   }
-  .notfound .home-btn, .notfound .contact-btn {
+  .content .home-btn, .content .contact-btn {
     font-size: 14px;
   }
 }
